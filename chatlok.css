@@ -7,8 +7,8 @@
 
   #messageInput{
     position: fixed;
-bottom: 0;
-width: 90%;
+bottom: 8px;
+width: 80%;
 background-color: white;
 float: right;
 height: 35px;
@@ -16,19 +16,19 @@ font-size: 16px;
 }
   
   #sendButton , #post{
-    bottom: 0;
+    bottom: 8px;
     height: 25px;
     color: white;
     background-color: #15f20a;
     border: 0;
     position:fixed;
     right: 0;
-    width: 9%;
+    width: 20%;
     height: 35px;
     font-size: 16px;
   }
   #messages {
-height: 90%;
+height: 100%;
 overflow-y: scroll;
 display: flex;
 flex-direction: column;
@@ -160,41 +160,57 @@ body {
 #membership-container {
   background-image: linear-gradient(to right, purple , blue);
   color: white;
-  height: 165px;
+  height: 250px;
   width: 75%;
   font-size: 18px;
-  padding: 20px;
+  padding-bottom: 7px;
   margin: 35px;
   flex-direction: column;
   position: fixed;
 }
 #name-container{
 float: left;
+margin: 6px;
+padding-bottom: 7px;
 }
 
 #post-container{
 display: block;
 float: right;
+margin: 6px;
+padding-bottom: 7px;
 }
 
 #isamemberof-lok{
   float: left;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 #work-progress{
   float: right;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 #memebr-number{
   float: left;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 
 #status-container{
   float: right;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 #marks-in-last-test{
   float: right;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 #violating-rule{
   float: left;
+  margin: 6px;
+  padding-bottom: 7px;
 }
 
 
@@ -230,8 +246,14 @@ float: right;
 
 /* idex - code*/
 
-
+body{
+  overflow: hidden;
+}
 #logIn-page-container, #username-container{
+padding-top: 90px;
+padding-left: 265px;
+padding-right: 245px;
+padding-bottom: 130px;
 font-size: 18px;
 margin: 5px;
 }
