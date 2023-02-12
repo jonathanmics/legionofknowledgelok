@@ -234,10 +234,6 @@ body{
   overflow: hidden;
 }
 #logIn-page-container, #username-container{
-padding-top: 90px;
-padding-left: 265px;
-padding-right: 245px;
-padding-bottom: 130px;
 font-size: 18px;
 margin: 5px;
 }
