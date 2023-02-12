@@ -1,1 +1,1 @@
-@import 
+@import url(script.js);
