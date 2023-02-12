@@ -230,9 +230,7 @@ float: right;
 
 /* idex - code*/
 
-body{
-  overflow: hidden;
-}
+
 #logIn-page-container, #username-container{
 font-size: 18px;
 margin: 5px;
