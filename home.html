@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lokcss.css">
+    <link rel="stylesheet" href="mainchatlok.css">
+    
+</head>
+
+<body>
+  <div class="header">
+    <div class="nav-logo-container">
+        <div>
+                <div class="nav-logo">
+                    <div id="mySidenav" class="sidenav">
+                <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </span>
+                <span id="home" onclick="home()" class="active">Home</span>
+                <span id="chat" onclick="chat()">Chat</span>
+                <span id="video" onclick="video()">Video</span>
+                <span id="test" onclick="test()">Test</span>
+                <span id="news" onclick="news()">News</span>
+                <span id="cheat" onclick="panel()">Profile</span>
+                <span id="about" onclick="about()">About</span>
+                <span id="logout" onclick="logout()">Log Out</span>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-logo-open-container">
+        <div id="nav-open-id-container">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <a href="#default" class="logo">Legion Of Knowlegde</a></span>
+        </div>
+    </div>
+</div>
+<div id="main-content-container">
+    <div id="content-header-container">
+        SEARCH THE LIGHT (45 DAY PLAN)
+    </div> 
+    <br>
+    <div id="welcome-container">
+
+    </div><br>
+    <div id="content-container">
+        <div class="sub" id="sub1"> Science</div>
+        <div class="hw" id="hw1"> Learn </div>
+        <br>
+        <div class="sub" id="sub2">Cmath</div>
+        <div class="hw" id="hw2">Qno {{null}}</div>
+        <br>
+        <div class="sub" id="sub3">Omath</div>
+        <div class="hw" id="hw3">Qno {{ null }}</div>
+        <br>
+
+        
+
+    </div>
+    
+</div>
+<script src="script.js"></script>
+<script>
+    var lll = localStorage.getItem("textvalue");
+    document.getElementById('welcome-container').innerHTML = "Welcome " + lll;
+    </script>
+</body></html>

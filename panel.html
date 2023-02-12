@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lokcss.css">
+    <link rel="stylesheet" href="mainchatlok.css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="nav-logo-container">
+        <div>
+                <div class="nav-logo">
+                    <div id="mySidenav" class="sidenav">
+                <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </span>
+                <span id="home" onclick="home()">Home</span>
+                <span id="chat" onclick="chat()">Chat</span>
+                <span id="video" onclick="video()">Video</span>
+                <span id="test" onclick="test()">Test</span>
+                <span id="news" onclick="news()">News</span>
+                <span id="cheat" onclick="panel()" class="active">Profile</span>
+                <span id="about" onclick="about()">About</span>
+                <span id="logout" onclick="logout()">Log Out</span>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-logo-open-container">
+        <div id="nav-open-id-container">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <a href="#default" class="logo">Legion Of Knowlegde</a></span>
+        </div>
+    </div>
+</div>
+<div id="ppanel">
+    <div id="membership-container">
+        <div id="memebr-number">
+         
+        </div> <div id="post-container">
+            
+        </div><br>
+        <div id="name-container">
+            
+        </div>
+        <div id="work-progress"> 
+            
+        </div><br>
+        <div id="isamemberof-lok">
+            
+        </div>
+        <div id="status-container">
+            
+        </div>
+        <br>
+        <div id="violating-rule">
+           
+        </div>
+    
+        <div id="marks-in-last-test">
+            
+        </div>
+        <div id="violating-rule">
+           
+        </div><br> <br>
+        <div id="fall"> </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+var lll = localStorage.getItem("textvalue");
+var unam = lll.toLocaleLowerCase();
+if (unam == "admin" || unam == "sujit"){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "001";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Sujit" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "Admin/Leader/Founder";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "36 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+
+}
+else if (unam.includes("james")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "002";
+    document.getElementById('name-container').innerHTML ="Name:          " +  " James" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "Co-founder";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else if (unam.includes("anuj")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "003";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Anuj" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "News Minister";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "57% (try no to give rough word in group)" ;
+}
+else if (unam.includes("aryan")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "004";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Aryan" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "I.A.";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else if (unam.includes("ghraj")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "005";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Dhirghraj" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "member";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else if (unam.includes("rohit")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "006";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Rohit" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "member";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "45% (need to improve)" ;
+}
+else if (unam.includes("manish")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "007";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Manish" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "Co-admin";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "36 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else if (unam.includes("mit")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "008";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Sumit" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "member";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else if (unam.includes("rajan")){
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "009";
+    document.getElementById('name-container').innerHTML ="Name:          " +  "Rajan" ;
+    document.getElementById('post-container').innerHTML = "Post: " + "Co-I.A.";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "Yes";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "Good (need a improvement)";
+    document.getElementById('status-container').innerHTML = "Status:     " + "Active" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "00 out of 50" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "0% (Perfect member)" ;
+}
+else {
+    document.getElementById('fall').innerHTML = "{{ your name is invalid. Please type your real name }}"
+    document.getElementById('memebr-number').innerHTML = "Membership no. " + "{{ null}}";
+    document.getElementById('name-container').innerHTML ="Name:          " +  unam ;
+    document.getElementById('post-container').innerHTML = "Post: " + "{{ null }}";
+    document.getElementById('isamemberof-lok').innerHTML = "Is a member of LOK?: " + "No";
+    document.getElementById('work-progress').innerHTML = "Progress:    " + "{{ null }}";
+    document.getElementById('status-container').innerHTML = "Status:     " + "inactive" ;
+    document.getElementById('marks-in-last-test').innerHTML = "MarksGotInLastTest: " + "{{ null }}" ;
+    document.getElementById('violating-rule').innerHTML = "Rules violating rate:  " + "{{ null }}" ;
+}
+</script>
+</body>
+</html>
+
