@@ -160,11 +160,11 @@ body {
 #membership-container {
   background-image: linear-gradient(to right, purple , blue);
   color: white;
-  height: 250px;
+  height: 300px;
   width: 75%;
   font-size: 18px;
-  padding-bottom: 7px;
-  margin: 35px;
+  padding: 7px;
+  margin: 8px;
   flex-direction: column;
   position: fixed;
 }
