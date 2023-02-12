@@ -160,7 +160,7 @@ body {
 #membership-container {
   background-image: linear-gradient(to right, purple , blue);
   color: white;
-  height: 70%%;
+  height: 80%;
   width: 75%;
   font-size: 18px;
   padding: 7px;
@@ -248,15 +248,10 @@ padding-bottom: 7px;
 
 body{
   overflow: hidden;
+  overflow-y: hidden;
+  overflow-y: hidden;
 }
-#logIn-page-container, #username-container{
-padding-top: 90px;
-padding-left: 265px;
-padding-right: 245px;
-padding-bottom: 130px;
-font-size: 18px;
-margin: 5px;
-}
+
 #user,#emaill, #pass,#logIn{
 margin: 4px;
 font-size: 18px;
