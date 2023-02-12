@@ -68,71 +68,7 @@
     <script type="module">
 
   
-      var lll = localStorage.getItem("textvalue");
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw",
-      authDomain: "lok-db.firebaseapp.com",
-      databaseURL: "https://lok-db-default-rtdb.firebaseio.com",
-      projectId: "lok-db",
-      storageBucket: " ",
-      messagingSenderId: "803437560630",
-      appId: "1:803437560630:web:6ceeee89f0052d41dea997",
-      measurementId: "G-GLVY4H3X97"
-    };
-    
-    firebase.initializeApp(firebaseConfig);
-    
-    
-    
-    
-    // code starts from here
- 
-    document.getElementById("sendButton").addEventListener("click", function() {
-      var message = document.getElementById("messageInput").value;
-      firebase.database().ref("messages").push().set({
-        username: lll,
-        message: message
-      });
-      document.getElementById("messageInput").value = "";
-    });
-    
-
-    // receive message
-
-var messagesRef = firebase.database().ref("messages");
-var messagesContainer = document.getElementById("messages");
-var inputContainer = document.getElementById("input");
-
-window.addEventListener("resize", function() {
-  if (window.innerHeight < inputContainer.offsetTop + inputContainer.offsetHeight) {
-    inputContainer.style.position = "absolute";
-    inputContainer.style.bottom = "0";
-  } else {
-    inputContainer.style.position = "fixed";
-    inputContainer.style.bottom = "";
-  }
-});
-
-messagesRef.on("child_added", function(snapshot) {
-  var message = snapshot.val();
-  
-  if (message.username && message.message) {
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode(message.username + ": " + message.message);
-    node.appendChild(textnode);
-    messagesContainer.appendChild(node);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  }
-});
-
-// // rel-time mesage
-// firebase.database().ref("messages").on("child_added", function(snapshot) {
-//   var message = snapshot.val().message;
-//   console.log("Received message: " + lll + ":" + message);
-// });
-
-
+     var _0x35f10c=_0x2d99;(function(_0xfd05f7,_0x2ac7c4){var _0x3f5822=_0x2d99,_0x3d2a57=_0xfd05f7();while(!![]){try{var _0x3c4089=-parseInt(_0x3f5822(0x10d))/0x1+parseInt(_0x3f5822(0x127))/0x2*(-parseInt(_0x3f5822(0x131))/0x3)+-parseInt(_0x3f5822(0x112))/0x4*(parseInt(_0x3f5822(0x117))/0x5)+parseInt(_0x3f5822(0x11a))/0x6*(-parseInt(_0x3f5822(0x12b))/0x7)+-parseInt(_0x3f5822(0x10f))/0x8+parseInt(_0x3f5822(0x116))/0x9*(parseInt(_0x3f5822(0x132))/0xa)+-parseInt(_0x3f5822(0x137))/0xb*(-parseInt(_0x3f5822(0x113))/0xc);if(_0x3c4089===_0x2ac7c4)break;else _0x3d2a57['push'](_0x3d2a57['shift']());}catch(_0x54433c){_0x3d2a57['push'](_0x3d2a57['shift']());}}}(_0x1df9,0x787cb));var lll=localStorage['getItem'](_0x35f10c(0x136));function _0x2d99(_0x516c3d,_0x44d6ea){var _0x1df96d=_0x1df9();return _0x2d99=function(_0x2d992d,_0x2ce7cb){_0x2d992d=_0x2d992d-0x10c;var _0x1524ea=_0x1df96d[_0x2d992d];return _0x1524ea;},_0x2d99(_0x516c3d,_0x44d6ea);}const firebaseConfig={'apiKey':_0x35f10c(0x12a),'authDomain':_0x35f10c(0x114),'databaseURL':_0x35f10c(0x135),'projectId':_0x35f10c(0x111),'storageBucket':'\x20','messagingSenderId':_0x35f10c(0x122),'appId':_0x35f10c(0x11f),'measurementId':_0x35f10c(0x118)};firebase[_0x35f10c(0x119)](firebaseConfig),document[_0x35f10c(0x134)](_0x35f10c(0x11d))['addEventListener'](_0x35f10c(0x126),function(){var _0x5dd01b=_0x35f10c,_0x12da2d=document[_0x5dd01b(0x134)](_0x5dd01b(0x12c))[_0x5dd01b(0x110)];firebase[_0x5dd01b(0x11c)]()[_0x5dd01b(0x124)]('messages')[_0x5dd01b(0x10e)]()[_0x5dd01b(0x120)]({'username':lll,'message':_0x12da2d}),document['getElementById']('messageInput')[_0x5dd01b(0x110)]='';});var messagesRef=firebase[_0x35f10c(0x11c)]()['ref'](_0x35f10c(0x125)),messagesContainer=document[_0x35f10c(0x134)](_0x35f10c(0x125)),inputContainer=document[_0x35f10c(0x134)]('input');function _0x1df9(){var _0x3e309f=['textvalue','759CzJgmg','createElement','scrollHeight','499263cKuMfT','push','7847336kLdfNO','value','lok-db','52YAhdBW','662916JCLNKb','lok-db.firebaseapp.com','message','103059ljCAzO','293705LRWTIW','G-GLVY4H3X97','initializeApp','1692102NknxoV','child_added','database','sendButton','username','1:803437560630:web:6ceeee89f0052d41dea997','set','offsetHeight','803437560630','offsetTop','ref','messages','click','2hVYxhE','appendChild','innerHeight','AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw','7RglTdh','messageInput','addEventListener','scrollTop','style','resize','2686443wlcLkb','90sZHAke','position','getElementById','https://lok-db-default-rtdb.firebaseio.com'];_0x1df9=function(){return _0x3e309f;};return _0x1df9();}window[_0x35f10c(0x12d)](_0x35f10c(0x130),function(){var _0x192f8b=_0x35f10c;window[_0x192f8b(0x129)]<inputContainer[_0x192f8b(0x123)]+inputContainer[_0x192f8b(0x121)]?(inputContainer[_0x192f8b(0x12f)][_0x192f8b(0x133)]='absolute',inputContainer[_0x192f8b(0x12f)]['bottom']='0'):(inputContainer[_0x192f8b(0x12f)]['position']='fixed',inputContainer[_0x192f8b(0x12f)]['bottom']='');}),messagesRef['on'](_0x35f10c(0x11b),function(_0xff2ee5){var _0x61b3a2=_0x35f10c,_0x11a47c=_0xff2ee5['val']();if(_0x11a47c[_0x61b3a2(0x11e)]&&_0x11a47c[_0x61b3a2(0x115)]){var _0x226226=document[_0x61b3a2(0x138)]('LI'),_0x41e60e=document['createTextNode'](_0x11a47c[_0x61b3a2(0x11e)]+':\x20'+_0x11a47c[_0x61b3a2(0x115)]);_0x226226['appendChild'](_0x41e60e),messagesContainer[_0x61b3a2(0x128)](_0x226226),messagesContainer[_0x61b3a2(0x12e)]=messagesContainer[_0x61b3a2(0x10c)];}});
 
     </script>
 
