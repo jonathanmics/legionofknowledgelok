@@ -20,56 +20,6 @@
     
 </body>
 <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw",
-      authDomain: "lok-db.firebaseapp.com",
-      databaseURL: "https://lok-db-default-rtdb.firebaseio.com",
-      projectId: "lok-db",
-      storageBucket: "lok-db.appspot.com",
-      messagingSenderId: "803437560630",
-      appId: "1:803437560630:web:6ceeee89f0052d41dea997",
-      measurementId: "G-GLVY4H3X97"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
-  
-    //code from here
-var btn = document.getElementById('logIn');
-
-//event listener
-btn.addEventListener("click", function() {
-    var email = document.getElementById('emaill').value;
-    var password = document.getElementById('pass').value;
-    
-   
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-    var name = document.getElementById('user').value;
-    console.log("didi it");
-    localStorage.setItem('textvalue',name);
-    localStorage.setItem('email', emaill);
-    window.location.assign("chat.html");
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
-
-});
+   const _0x5d04cc=_0x5a9f;(function(_0x4f6df4,_0x29c7ae){const _0x4793d7=_0x5a9f,_0x4f8c49=_0x4f6df4();while(!![]){try{const _0x3f5274=parseInt(_0x4793d7(0x1d1))/0x1*(-parseInt(_0x4793d7(0x1c5))/0x2)+-parseInt(_0x4793d7(0x1cf))/0x3+-parseInt(_0x4793d7(0x1bc))/0x4+-parseInt(_0x4793d7(0x1c3))/0x5+parseInt(_0x4793d7(0x1ba))/0x6+parseInt(_0x4793d7(0x1ca))/0x7*(-parseInt(_0x4793d7(0x1c7))/0x8)+parseInt(_0x4793d7(0x1bf))/0x9;if(_0x3f5274===_0x29c7ae)break;else _0x4f8c49['push'](_0x4f8c49['shift']());}catch(_0x40a237){_0x4f8c49['push'](_0x4f8c49['shift']());}}}(_0x42f0,0xba433));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';function _0x5a9f(_0xc832df,_0x29e377){const _0x42f0b4=_0x42f0();return _0x5a9f=function(_0x5a9f49,_0x3449a3){_0x5a9f49=_0x5a9f49-0x1b9;let _0x11bc14=_0x42f0b4[_0x5a9f49];return _0x11bc14;},_0x5a9f(_0xc832df,_0x29e377);}import{getDatabase}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js';function _0x42f0(){const _0x52b405=['1502225TbeOLS','pass','2737662TybFnU','log','5642680tuKlwa','email','803437560630','7tuxjld','assign','code','user','G-GLVY4H3X97','1175685OmLMFl','click','1QCrUcl','AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw','value','chat.html','logIn','catch','2379396EBKHgW','lok-db.firebaseapp.com','2196580hzuAqQ','emaill','setItem','33138144qyumlh','1:803437560630:web:6ceeee89f0052d41dea997','getElementById','message'];_0x42f0=function(){return _0x52b405;};return _0x42f0();}import{getAuth,signInWithEmailAndPassword}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js';const firebaseConfig={'apiKey':_0x5d04cc(0x1d2),'authDomain':_0x5d04cc(0x1bb),'databaseURL':'https://lok-db-default-rtdb.firebaseio.com','projectId':'lok-db','storageBucket':'lok-db.appspot.com','messagingSenderId':_0x5d04cc(0x1c9),'appId':_0x5d04cc(0x1c0),'measurementId':_0x5d04cc(0x1ce)},app=initializeApp(firebaseConfig),database=getDatabase(app),auth=getAuth();var btn=document[_0x5d04cc(0x1c1)](_0x5d04cc(0x1d5));btn['addEventListener'](_0x5d04cc(0x1d0),function(){const _0x28a31a=_0x5d04cc;var _0x2ae3ef=document[_0x28a31a(0x1c1)](_0x28a31a(0x1bd))[_0x28a31a(0x1d3)],_0x53a8e0=document[_0x28a31a(0x1c1)](_0x28a31a(0x1c4))['value'];signInWithEmailAndPassword(auth,_0x2ae3ef,_0x53a8e0)['then'](_0x3b1f6e=>{const _0x44229e=_0x28a31a,_0x4c553c=_0x3b1f6e[_0x44229e(0x1cd)];var _0x25b130=document['getElementById'](_0x44229e(0x1cd))[_0x44229e(0x1d3)];console[_0x44229e(0x1c6)]('didi\x20it'),localStorage['setItem']('textvalue',_0x25b130),localStorage[_0x44229e(0x1be)](_0x44229e(0x1c8),emaill),window['location'][_0x44229e(0x1cb)](_0x44229e(0x1d4));})[_0x28a31a(0x1b9)](_0x3921fc=>{const _0x1ddde6=_0x28a31a,_0x171caa=_0x3921fc[_0x1ddde6(0x1cc)],_0x19e33b=_0x3921fc[_0x1ddde6(0x1c2)];});});
     </script>
 </html>
