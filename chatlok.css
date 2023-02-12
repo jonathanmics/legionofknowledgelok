@@ -99,12 +99,7 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: center;
-    display: block;
-    text-align: left;
-  }
+
   
   .header-right {
     float: none;
@@ -151,10 +146,7 @@ body {
     color: white;
     background-color: #15f20a;
 }
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
 /* css code for profile card */
 
 #membership-container {
