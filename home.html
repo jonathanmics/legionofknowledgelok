@@ -5,91 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="lokcss.css">
     <link rel="stylesheet" href="mainchatlok.css">
+    
 </head>
+
 <body>
-    <div id="logIn-page-container">
-        <div id="username-container">
-            <input type="text" autocomplete="on" id="user" placeholder="enter name"> <br>
-            <input type="text" autocomplete="on" id="emaill" placeholder="enter email"><br>
-            <input type="password" autocomplete="off" id="pass" placeholder="enter password"> <br>
-            <div id="login-button-container">
-                <button id="logIn">Log In</button>
-            </div> <br> <center>
-            <div id="result"> </div> </center>
+  <div class="header">
+    <div class="nav-logo-container">
+        <div>
+                <div class="nav-logo">
+                    <div id="mySidenav" class="sidenav">
+                <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </span>
+                <span id="home" onclick="home()" class="active">Home</span>
+                <span id="chat" onclick="chat()">Chat</span>
+                <span id="video" onclick="video()">Video</span>
+                <span id="test" onclick="test()">Test</span>
+                <span id="news" onclick="news()">News</span>
+                <span id="cheat" onclick="panel()">Profile</span>
+                <span id="about" onclick="about()">About</span>
+                <span id="logout" onclick="logout()">Log Out</span>
+
+            </div>
+            </div>
         </div>
     </div>
+    <div class="nav-logo-open-container">
+        <div id="nav-open-id-container">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <a href="#default" class="logo">Legion Of Knowlegde</a></span>
+        </div>
+    </div>
+</div>
+<div id="main-content-container">
+    <div id="content-header-container">
+        SEARCH THE LIGHT (45 DAY PLAN)
+    </div> 
+    <br>
+    <div id="welcome-container">
+
+    </div><br>
+    <div id="content-container">
+        <!-- <div class="sub" id="sub1"> Science</div>
+        <div class="hw" id="hw1"> Learn </div>
+        <br>
+        <div class="sub" id="sub2">Cmath</div>
+        <div class="hw" id="hw2">Qno {{null}}</div>
+        <br>
+        <div class="sub" id="sub3">Omath</div>
+        <div class="hw" id="hw3">Qno {{ null }}</div> -->
+        <br>
+
+        
+
+    </div>
     
-</body>
+</div>
+<div id="footer">
+    <div id="failed"></div>
+    <div id="update-homework">
+        <div id="update-homework-button-container">
+            <input tyoe="text" id="subject" width="100%" placeholder="subject"> <br>
+            <input type="text" id="point" width = "100%" placeholder="homework"> <br>
+    <button id="upd2">upd2</button>
+            <button id="upd">Upadate Homework</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    
+<script src="script.js"></script>
 <script type="module">
-  
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
+    
+    var lll = localStorage.getItem("textvalue");
+    document.getElementById('welcome-container').innerHTML = "Welcome " + lll;
+
+
+    /// js of update homework
+
+    document.getElementById('upd2').addEventListener("click", function () {
+        var tik = localStorage.getItem('email');
+        
+        // comparing
+        if(tik.includes("chill") || tik.includes("book") || tik.includes('gauro')) {
+            var mes = document.getElementById('subject').value;
+            var dress = document.getElementById('point').value;  
+
+            const firebaseConfig = {
       apiKey: "AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw",
       authDomain: "lok-db.firebaseapp.com",
       databaseURL: "https://lok-db-default-rtdb.firebaseio.com",
       projectId: "lok-db",
-      storageBucket: "lok-db.appspot.com",
+      storageBucket: " ",
       messagingSenderId: "803437560630",
       appId: "1:803437560630:web:6ceeee89f0052d41dea997",
       measurementId: "G-GLVY4H3X97"
     };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
-  
-    //code from here
-var btn = document.getElementById('logIn');
-//event listener
-
-
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is already logged in, redirect to the appropriate page
-      window.location.assign("home.html");
-    }
-
-
-    else {
-
-  
-btn.addEventListener("click", function() {
-    var email = document.getElementById('emaill').value;
-    var password = document.getElementById('pass').value;
-    document.getElementById('result').innerHTML = "please wait...";
-   
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    document.cookie = "firebaseAuth=" + userCredential.user.refreshToken + "; path=/";
-    const user = userCredential.user;
-    // ...
-    var name = document.getElementById('user').value;
-    var ema = document.getElementById('emaill').value;
-    console.log("didi it");
-    localStorage.setItem('textvalue',name);
-    localStorage.setItem('email', ema);
-    window.location.assign("home.html");
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    document.getElementById('result').innerHTML = "email address and password is incorrect";
-  });
     
-}); 
-    }
-  });
+    firebase.initializeApp(firebaseConfig);
+    
+     // code starts from here
+     document.getElementsByTagName('input').style.visibility = "visible";
+     
+     var cap = document.getElementById('upd');
+     cap.addEventListener("click", function(){
+        var message = document.getElementById('subject').value;
+        var pass = document.getElementById('point').value;
+      firebase.database().ref("work").push().set({
+        work: pass,
+        subject: message,
+        email: tik
+      });
+      document.getElementById('point').value = "";
+     });
+ 
+     var i = 1 ;
+
+     firebase.database().ref("work").on("child_added", function(snapshot) {
+        var message = document.getElementById('subject').value;
+        var pass = document.getElementById('point').value;
+  var message = snapshot.val();
+var messagesContainer = document.getElementById('content-container');
+    var node = document.createElement("DIV");
+    var textnode = document.createTextNode(message);
+    node.appendChild(textnode);
+    messagesContainer.appendChild(node);
+
+    var message = snapshot.val();
+    var messagesContainer = document.getElementById('content-container');
+    var node2 = document.createElement("SPAN");
+    var textnode2 = document.createTextNode(pass);
+    node.appendChild(textnode);
+    messagesContainer.appendChild(node);
   
+});
+
+        }
+        else {
+            alert("You don't have access to update homework");
+        }
+
+    });
     </script>
-</html>
+</body></html>
