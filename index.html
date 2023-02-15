@@ -22,6 +22,74 @@
     
 </body>
 <script type="module">
-   const _0x1b048c=_0x1e3f;(function(_0x5f6ed1,_0x19997d){const _0x3ea0a2=_0x1e3f,_0x5127d6=_0x5f6ed1();while(!![]){try{const _0x122a67=-parseInt(_0x3ea0a2(0x106))/0x1+parseInt(_0x3ea0a2(0xf3))/0x2+-parseInt(_0x3ea0a2(0xfb))/0x3*(-parseInt(_0x3ea0a2(0xf9))/0x4)+-parseInt(_0x3ea0a2(0xfa))/0x5+-parseInt(_0x3ea0a2(0xf2))/0x6+parseInt(_0x3ea0a2(0xf5))/0x7+parseInt(_0x3ea0a2(0xf6))/0x8;if(_0x122a67===_0x19997d)break;else _0x5127d6['push'](_0x5127d6['shift']());}catch(_0x4f206b){_0x5127d6['push'](_0x5127d6['shift']());}}}(_0x2615,0x9daf2));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';import{getDatabase}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js';function _0x1e3f(_0x136509,_0x2c5ed9){const _0x26158d=_0x2615();return _0x1e3f=function(_0x1e3f8d,_0xc4e2c2){_0x1e3f8d=_0x1e3f8d-0xec;let _0x5a0335=_0x26158d[_0x1e3f8d];return _0x5a0335;},_0x1e3f(_0x136509,_0x2c5ed9);}import{getAuth,signInWithEmailAndPassword}from'https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js';const firebaseConfig={'apiKey':_0x1b048c(0x110),'authDomain':_0x1b048c(0x10e),'databaseURL':_0x1b048c(0xfd),'projectId':_0x1b048c(0x10b),'storageBucket':_0x1b048c(0x112),'messagingSenderId':_0x1b048c(0x10d),'appId':_0x1b048c(0xf0),'measurementId':_0x1b048c(0xed)},app=initializeApp(firebaseConfig),database=getDatabase(app),auth=getAuth();function _0x2615(){const _0x57e3ec=['1:803437560630:web:6ceeee89f0052d41dea997','getElementById','6817896EsyxJw','1938698dQtDQa','didi\x20it','8426544icSPQs','12081344OqCzef','textvalue','please\x20wait...','29596nzUXbS','5339350QHFCqe','147orCmnA','logIn','https://lok-db-default-rtdb.firebaseio.com','home.html','user','click','catch','location','result','code','message','1195800gorJUK','value','email','addEventListener','assign','lok-db','emaill','803437560630','lok-db.firebaseapp.com','setItem','AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw','innerHTML','lok-db.appspot.com','log','G-GLVY4H3X97','then','email\x20address\x20and\x20password\x20is\x20incorrect'];_0x2615=function(){return _0x57e3ec;};return _0x2615();}var btn=document[_0x1b048c(0xf1)](_0x1b048c(0xfc));btn[_0x1b048c(0x109)](_0x1b048c(0x100),function(){const _0x5d673d=_0x1b048c;var _0x1bb87f=document[_0x5d673d(0xf1)](_0x5d673d(0x10c))[_0x5d673d(0x107)],_0x21a853=document[_0x5d673d(0xf1)]('pass')[_0x5d673d(0x107)];document[_0x5d673d(0xf1)]('result')[_0x5d673d(0x111)]=_0x5d673d(0xf8),signInWithEmailAndPassword(auth,_0x1bb87f,_0x21a853)[_0x5d673d(0xee)](_0x671694=>{const _0x39e4c8=_0x5d673d,_0x17653b=_0x671694[_0x39e4c8(0xff)];var _0x40ca4b=document[_0x39e4c8(0xf1)](_0x39e4c8(0xff))[_0x39e4c8(0x107)],_0x2df704=document[_0x39e4c8(0xf1)](_0x39e4c8(0x10c))['value'];console[_0x39e4c8(0xec)](_0x39e4c8(0xf4)),localStorage[_0x39e4c8(0x10f)](_0x39e4c8(0xf7),_0x40ca4b),localStorage[_0x39e4c8(0x10f)](_0x39e4c8(0x108),_0x2df704),window[_0x39e4c8(0x102)][_0x39e4c8(0x10a)](_0x39e4c8(0xfe));})[_0x5d673d(0x101)](_0x141698=>{const _0x11590a=_0x5d673d,_0x27df75=_0x141698[_0x11590a(0x104)],_0x43bb6d=_0x141698[_0x11590a(0x105)];document['getElementById'](_0x11590a(0x103))[_0x11590a(0x111)]=_0x11590a(0xef);});});
+  
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBmuATPx4LbQAPWyIdbRcqpkgn8nsUB8hw",
+      authDomain: "lok-db.firebaseapp.com",
+      databaseURL: "https://lok-db-default-rtdb.firebaseio.com",
+      projectId: "lok-db",
+      storageBucket: "lok-db.appspot.com",
+      messagingSenderId: "803437560630",
+      appId: "1:803437560630:web:6ceeee89f0052d41dea997",
+      measurementId: "G-GLVY4H3X97"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+  
+    //code from here
+var btn = document.getElementById('logIn');
+//event listener
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is already logged in, redirect to the appropriate page
+      window.location.assign("home.html");
+    }
+
+
+    else {
+
+  
+btn.addEventListener("click", function() {
+    var email = document.getElementById('emaill').value;
+    var password = document.getElementById('pass').value;
+    document.getElementById('result').innerHTML = "please wait...";
+   
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    document.cookie = "firebaseAuth=" + userCredential.user.refreshToken + "; path=/";
+    const user = userCredential.user;
+    // ...
+    var name = document.getElementById('user').value;
+    var ema = document.getElementById('emaill').value;
+    console.log("didi it");
+    localStorage.setItem('textvalue',name);
+    localStorage.setItem('email', ema);
+    window.location.assign("home.html");
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    document.getElementById('result').innerHTML = "email address and password is incorrect";
+  });
+    
+}); 
+    }
+  });
+  
     </script>
 </html>
