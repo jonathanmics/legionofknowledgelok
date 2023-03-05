@@ -61,7 +61,7 @@ button {
   }  
 
 
-notes-container {
+#notes-container {
     font-family: Helvetica;
     padding: 14px;
     margin: 7px;
