@@ -1,0 +1,16 @@
+<h3><center> NPABSON QUESTION SOLUTION Q 9.b </center></h3>
+
+<code>
+  OPEN "EMP.DAT" FOR INPUT AS #1
+  CLS
+  WHILE NOT EOF(1)
+  INPUT #1, name$, address$, gen$, sal
+  IF sal > 50000 THEN
+  PRINT name$, address$, gen$, sal
+  END IF
+  WEND
+  CLOSE #1
+  END 
+</code>
+  
+  
